@@ -11,7 +11,7 @@ class FTRL: public ISGD{
   public:
 	virtual bool InitFromStr(const std::string& para);
 	virtual float PredictProb(const float* w,const float* z,const float* n,const char* indicator,const std::vector<unsigned int>& x)const;
-	virtual void Update(float *new_w,float* w,float* z,float* n,double p,unsigned int y,const std::vector<unsigned int>& x,int& zero_cnt);
+	virtual void Update(float *new_w,float* w,float* z,float* n,double p,unsigned int y,const std::vector<unsigned int>& x);
 	virtual ~FTRL(){}
 };
 

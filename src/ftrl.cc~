@@ -61,7 +61,7 @@ void FTRL::Update(float *new_w,float* w,float* z,float* n,double p,unsigned int 
 		}else{
 			new_w[x[i]]=0;
 		}
-		if(std::abs(old)<1e-12 && std::abs(new_w[x[i]])>1e-12 && zero_cnt)    --zero_cnt;
-		if(std::abs(old)>1e-12 && std::abs(new_w[x[i]])<1e-12)    ++zero_cnt;
+		if(0.0==old && 0.0!=new_w[x[i]] && zero_cnt)    --zero_cnt;
+		if(0.0!=old && 0.0==new_w[x[i]])    ++zero_cnt;
 	}
 }

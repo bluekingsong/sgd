@@ -89,8 +89,8 @@ void OnlineTraining(const std::vector<std::vector<unsigned int> >& partitions,
 	double new_logloss=0.0;
 	std::cout<<"start training model. time:"<<TimeFunction::now()<<std::endl;
 	for(unsigned int P=0;P<partitions.size();++P){
-		//std::memset(z,0,sizeof(float)*num_feature);
-		//std::memset(n,0,sizeof(float)*num_feature);
+		std::memset(z,0,sizeof(float)*num_feature);
+		std::memset(n,0,sizeof(float)*num_feature);
 		 // start of a round training
 		std::memcpy(w2,new_w,sizeof(float)*num_feature);
 		// training agian

@@ -8,6 +8,7 @@ bool GeneratePartition(std::vector<std::vector<unsigned int> >& partitions, unsi
 
 void OnlineTraining(const std::vector<std::vector<unsigned int> >& partitions,
 					float bias,unsigned int num_feature,const std::string& data_path,
-					ISGD& sgd,const std::string& predict_output,const std::string& batch_para_file);
+					ISGD& sgd,const std::string& predict_output,const std::string& batch_para_file,
+					int& zero_cnt);
 
 #endif
